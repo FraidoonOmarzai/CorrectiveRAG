@@ -23,6 +23,7 @@ files = [
     "setup.py",
     "app.py",
     "requirements.txt",
+    '.env',
     os.path.join("notebook", "experiments.ipynb"),
     os.path.join("src", "__init__.py")
 ]

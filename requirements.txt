@@ -1,4 +1,8 @@
 langchain_groq
 langchain_huggingface
 langchain_community
+langgraph
 chromadb
+bs4
+tiktoken
+python-dotenv
