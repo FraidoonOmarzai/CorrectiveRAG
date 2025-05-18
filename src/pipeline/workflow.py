@@ -234,17 +234,17 @@ class CRAGWorkFlow:
         return workflow.compile()
     
     
-if __name__=="__main__":
-    workflow = CRAGWorkFlow()
-    app = workflow.build_graph()
+# if __name__=="__main__":
+#     workflow = CRAGWorkFlow()
+#     app = workflow.build_graph()
 
-    # Run
-    inputs = {"question": "Explain generative ai?"}
-    for output in app.stream(inputs):
-        for key, value in output.items():
-            # Node
-            pprint(f"Node '{key}':")
-        pprint("\n---\n")
+#     # Run
+#     inputs = {"question": "Explain generative ai?"}
+#     for output in app.stream(inputs):
+#         for key, value in output.items():
+#             # Node
+#             pprint(f"Node '{key}':")
+#         pprint("\n---\n")
 
-    # Final generation
-    pprint(value["generation"])
+#     # Final generation
+#     pprint(value["generation"])
