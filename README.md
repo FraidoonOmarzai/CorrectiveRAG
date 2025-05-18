@@ -30,3 +30,5 @@ notebook/experiments.ipynb
 6. `pipeline\data_loader.py`
 
 7. `pipeline\grade_documents.py`
+
+8. `pipeline\workflow.py`

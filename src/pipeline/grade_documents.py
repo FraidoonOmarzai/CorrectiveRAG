@@ -79,6 +79,6 @@ class RetrievalGrader:
             raise CustomException(e, sys)
         
         
-if __name__=="__main__":
-    retrieval_grade = RetrievalGrader()
-    retrieval_grade, rag_chain = retrieval_grade.create_grader()
+# if __name__=="__main__":
+#     retrieval_grade = RetrievalGrader()
+#     retrieval_grade, rag_chain = retrieval_grade.create_grader()

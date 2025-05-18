@@ -26,7 +26,7 @@ class DataLoader:
             # load the data
             docs = [WebBaseLoader(url).load() for url in urls]
             docs_list = [item for sublist in docs for item in sublist]
-            logger.info(f"documents: {docs_list}")
+            logger.info(f"documents: {len(docs_list)}")
             return docs_list
 
         except Exception as e:
