@@ -32,3 +32,13 @@ notebook/experiments.ipynb
 7. `pipeline\grade_documents.py`
 
 8. `pipeline\workflow.py`
+
+![alt text](CRAG_LangGraph.png)
+
+9. `app.py`
+
+- Generate Answer From Documents
+![alt text](rag_gen.png)
+
+- Generating use Web Search
+![alt text](web_search.png)

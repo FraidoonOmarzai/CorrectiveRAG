@@ -22,15 +22,11 @@ if st.button("Generate Answer"):
             # Run the compiled graph and display intermediate outputs
             with st.spinner("Processing..."):
                 for output in app.stream(result):
-                    # Print each node output using pprint for better formatting
                     for key, value in output.items():
                         st.write(f"**Node '{key}':**")
                     st.markdown("---")
                 st.write(value["generation"])
 
-            # Display the final answer
-            # final_answer = outputs[-1].get("generation", "No answer generated.")
-            # st.success(f"Final Answer: {final_answer}")
 
         except CustomException as ce:
             logger.error(f"Custom Exception occurred: {ce}")

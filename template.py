@@ -17,8 +17,6 @@ for dir_ in dirs:
 
 
 files = [
-    "dvc.yaml",
-    "params.yaml",
     "Dockerfile",
     "setup.py",
     "app.py",
