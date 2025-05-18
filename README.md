@@ -21,3 +21,10 @@ pip install -r requirements.txt
 ```
 
 4. Define custom exception and define logger (**The Logging** is a means of tracking events that happen when some software runs)
+
+5. Run the codes in jupyter-notebook
+```bash
+notebook/experiments.ipynb
+```
+
+6. 

@@ -6,3 +6,8 @@ chromadb
 bs4
 tiktoken
 python-dotenv
+streamlit
+
+
+# local package
+-e .
