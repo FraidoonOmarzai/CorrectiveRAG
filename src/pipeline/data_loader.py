@@ -55,11 +55,11 @@ class DataLoader:
         except Exception as e:
             raise CustomException(e, sys)
         
-    def retrieve_data(self):
+    def create_retriever(self):
         try:
             vectorstore = self.store_data()
             retriever = vectorstore.as_retriever(search_kwargs={'k': 2})
-            logger.info("data retrieved")
+            logger.info("create_retriever")
 
             return retriever
 
@@ -68,7 +68,7 @@ class DataLoader:
         
 
 
-if __name__ == "__main__":
-    data_loader = DataLoader()
-    retriever = data_loader.retrieve_data()
-    print(str(retriever.invoke("what is an rag")[0]))
+# if __name__ == "__main__":
+#     data_loader = DataLoader()
+#     retriever = data_loader.create_retriever()
+#     print(str(retriever.invoke("what is an rag")[0]))

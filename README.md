@@ -27,4 +27,6 @@ pip install -r requirements.txt
 notebook/experiments.ipynb
 ```
 
-6. 
+6. `pipeline\data_loader.py`
+
+7. `pipeline\grade_documents.py`
