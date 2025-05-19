@@ -58,3 +58,10 @@ notebook/experiments.ipynb
 
 - Generated Answer Using Web Search
 ![web_search](web_search.png)
+
+10. Adding Docker to the project `Dockerfile`
+
+```bash
+1. docker build -t crag-app .
+2. docker run -p 8501:8501 --env-file .env crag-app
+```
