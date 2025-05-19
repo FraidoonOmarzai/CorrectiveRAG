@@ -12,8 +12,6 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
-      - name: Debug Secret
-        run: echo "Docker user: ${{ secrets.DOCKER_USERNAME }}"
 
       - name: Login to Docker registry
         uses: docker/login-action@v1
