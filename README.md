@@ -20,25 +20,41 @@ conda activate crag
 pip install -r requirements.txt
 ```
 
-4. Define custom exception and define logger (**The Logging** is a means of tracking events that happen when some software runs)
+4. Define custom exception and define logger (**The Logging** is a means of tracking events that happen when some software runs) 
+- Uses CustomException to handle errors with context.
 
-5. Run the codes in jupyter-notebook
+- Utilizes logger for structured logging and debugging.
+
+5. Run the codes in jupyter-notebook (Store qroq api and tavily api in .env file)
 ```bash
 notebook/experiments.ipynb
 ```
 
-6. `pipeline\data_loader.py`
+6. `src\pipeline\data_loader.py`
+    - fetch_contents(): Fetches data from specified URLs
+    - store_data(): Stores processed data into a vector database
+    - create_retriever(): Creates a retriever for similarity-based document search
 
-7. `pipeline\grade_documents.py`
+7. `src\pipeline\grade_documents.py` -> grade the relevance of retrieved documents to a user's question
 
 8. `pipeline\workflow.py`
+- The class within `workflow.py` class implements a pipeline for dynamically generating accurate responses by combining retrieval, document grading, query transformation, and LLM-based generation.
+
+    ##### Methods:
+        - retrieve: Retrieves documents based on a question.
+        - generate: Generates an answer using the retrieved documents.
+        - grade_documents: Filters relevant documents from the retrieved set.
+        - transform_query: Reformulates the question for better search efficiency.
+        - web_search: Searches the web for additional information if required.
+        - decide_to_generate: Determines whether to generate a response or reformulate the query.
+        - build_graph: Constructs and compiles the state graph for the workflow.
 
 ![alt text](CRAG_LangGraph.png)
 
-9. `app.py`
+9. `app.py` -> adding streamlit to define the UI
 
-- Generate Answer From Documents
-![alt text](rag_gen.png)
+- Generated Answer From Documents
+![rag_gen](rag_gen.png)
 
-- Generating use Web Search
-![alt text](web_search.png)
+- Generated Answer Using Web Search
+![web_search](web_search.png)

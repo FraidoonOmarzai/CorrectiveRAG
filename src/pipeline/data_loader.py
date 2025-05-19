@@ -9,6 +9,15 @@ from langchain_community.vectorstores import Chroma
 
 
 class DataLoader:
+    """
+    A class to handle data loading, processing, and storage for RAG (Retrieval-Augmented Generation).
+
+    Methods:
+        __init__(): Initializes the embedding model.
+        fetch_contents(): Fetches data from specified URLs.
+        store_data(): Stores processed data into a vector database.
+        create_retriever(): Creates a retriever for similarity-based document search.
+    """
 
     def __init__(self):
 
@@ -38,7 +47,7 @@ class DataLoader:
 
             # split the data into chunks
             text_splitter = RecursiveCharacterTextSplitter.from_tiktoken_encoder(
-                chunk_size=500, chunk_overlap=250
+                chunk_size=300, chunk_overlap=100
             )
             doc_splits = text_splitter.split_documents(docs_list)
 
@@ -54,7 +63,7 @@ class DataLoader:
 
         except Exception as e:
             raise CustomException(e, sys)
-        
+
     def create_retriever(self):
         try:
             vectorstore = self.store_data()
@@ -65,7 +74,6 @@ class DataLoader:
 
         except Exception as e:
             raise CustomException(e, sys)
-        
 
 
 # if __name__ == "__main__":

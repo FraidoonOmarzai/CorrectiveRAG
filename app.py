@@ -23,7 +23,7 @@ if st.button("Generate Answer"):
             with st.spinner("Processing..."):
                 for output in app.stream(result):
                     for key, value in output.items():
-                        st.write(f"**Node '{key}':**")
+                        st.write(f"**Node -> '{key}'**")
                     st.markdown("---")
                 st.write(value["generation"])
 
