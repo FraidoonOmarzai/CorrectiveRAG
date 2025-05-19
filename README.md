@@ -65,3 +65,5 @@ notebook/experiments.ipynb
 1. docker build -t crag-app .
 2. docker run -p 8501:8501 --env-file .env crag-app
 ```
+
+11. Adding Github Action (CI/CD) to deploy the docker image to docker hub `.github\workflows\cicd.yml`
